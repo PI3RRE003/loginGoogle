@@ -1,148 +1,149 @@
 * {
-    box-sizing: border-box;
-  }
-body{
-    display: block;
-    margin: 0 auto; 
-    text-align: center;
-    font-family:Arial, Helvetica, sans-serif;
-    max-width: 500px;
-    width: 100%;
+  box-sizing: border-box;
 }
 
-#globo{
-    display: block;
-    max-width: 500px;
-    margin: 0 auto;
-    margin-top: 15px;
+body {
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 500px;
+  width: 100%;
 }
 
-#plataformas{
-    display: block;
-    max-width: 500px;
-    margin: 0 auto;
+#globo,
+#plataformas {
+  display: block;
+  max-width: 500px;
+  margin: 15px auto 0 auto;
 }
 
-form{
-    display: block;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 30px;
-    color: #FFF;
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #fff;
 }
 
 form div {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 form label {
-    color: rgb(110, 108, 108);
-    display: block;
-    float: left;
-    margin-bottom: 1px;
+  color: rgb(110, 108, 108);
+  display: block;
+  float: left;
+  margin-bottom: 1px;
 }
 
 form div input {
-    color: rgb(110, 108, 108);
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid;
-}   
-
-form button{
-    background-color: rgb(0, 89, 255);
-    color: #FFF;
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer; 
-    font-weight: bold; 
-    margin-top: 20px;
-    
+  color: rgb(110, 108, 108);
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid;
 }
 
-#opcao{
-    display: block;
-    color: rgb(110, 108, 108);
-    margin-top: 30px; 
+form button {
+  background: linear-gradient(135deg, #0047FF, #00E0FF);
+  color: white;
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 15px rgba(0, 71, 255, 0.4);
 }
 
-
-#google{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 1px solid;
-    padding: 1px;
-    width: 100%;
-    color: rgb(0, 0, 255);
+form button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, #ffffff44 0%, transparent 80%);
+  transform: rotate(0deg);
+  animation: rotateLight 3s linear infinite;
+  z-index: 1;
 }
 
-#imgGoogle{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px;
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00e0ff, 0 0 50px #0047ff, 0 0 100px #0047ff;
+  transition: all 0.3s ease-in-out;
 }
 
-#facebook{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 1px solid;
-    padding: 1px;
-    width: 100%;
-    color: rgb(0, 0, 255);
-    margin-top:  10px;
+form button span {
+  position: relative;
+  z-index: 2;
 }
 
-#imgFacebook{
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 5px
+@keyframes rotateLight {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-
-a{
-    text-decoration: none;
-    margin-left: 5px;
+#opcao {
+  display: block;
+  color: rgb(110, 108, 108);
+  margin-top: 30px;
 }
 
-#criar{
-    display: block;
-    margin: 0 auto;
-    margin-top: 15px;
-    color: rgb(0, 0, 0);
+#google,
+#facebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 1px;
+  width: 100%;
+  color: rgb(0, 0, 255);
 }
 
-#criarLink{
-    text-decoration:underline;
+#facebook {
+  margin-top: 10px;
 }
 
-#politica{
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: bold;
-    background-color: rgb(211, 208, 208);
-    color:rgb(0, 0, 0);
-    border-radius: 5px;
-    width: 92%;
-    font-size:smaller;
-    text-align: left;
-    padding: 10px;
-    border-radius: 10px;
-    border: none
+#imgGoogle,
+#imgFacebook {
+  margin: 5px 5px 5px 0;
 }
 
+a {
+  text-decoration: none;
+  margin-left: 5px;
+}
 
+#criar {
+  display: block;
+  margin: 15px auto 0 auto;
+  color: rgb(0, 0, 0);
+}
 
+#criarLink {
+  text-decoration: underline;
+}
 
+#politica {
+  display: inline-block;
+  background-color: rgb(211, 208, 208);
+  color: rgb(0, 0, 0);
+  border-radius: 10px;
+  width: 92%;
+  font-size: smaller;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  border: none;
+}
